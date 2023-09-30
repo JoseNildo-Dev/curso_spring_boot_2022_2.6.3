@@ -14,7 +14,7 @@ public class Pessoa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int codigo;
     private String nome;
-    private String idade;
+    private int idade;
 
     public int getCodigo() {
         return codigo;
@@ -29,10 +29,10 @@ public class Pessoa {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getIdade() {
+    public int getIdade() {
         return idade;
     }
-    public void setIdade(String idade) {
+    public void setIdade(int idade) {
         this.idade = idade;
     }
     
