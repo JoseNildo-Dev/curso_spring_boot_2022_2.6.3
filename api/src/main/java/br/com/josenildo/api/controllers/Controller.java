@@ -2,6 +2,8 @@ package br.com.josenildo.api.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.josenildo.api.models.Cliente;
 import br.com.josenildo.api.models.Pessoa;
 import br.com.josenildo.api.repositories.Repositorio;
 import br.com.josenildo.api.services.Servico;
@@ -89,5 +92,10 @@ public class Controller {
     @PostMapping("/pessoa")    
     public Pessoa pessoa(@RequestBody Pessoa p) {
         return p;
+    }
+
+    @PostMapping("/cliente")
+    public void cliente(@Valid @RequestBody Cliente obj) {
+        
     }
 }
